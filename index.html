@@ -19,6 +19,22 @@
 		<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
 		<link rel="import" href="bower_components/paper-tooltip/paper-tooltip.html">
 		<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+		<!-- Titlebar Button's functional -->
+		<script>
+		window.onload = () =>
+		{
+			const {remote} = require("electron");
+			let currentWindow = null;
+
+			//Button Close
+			const btnClose = document.getElementById("btnClose");
+			btnClose.onclick = (e) =>
+			{
+				currentWindow = remote.getCurrentWindow();
+				currentWindow.close();
+			};
+		}
+		</script>
 	</head>
 	<body>
 		<!-- App titlebar -->
