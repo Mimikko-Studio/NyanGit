@@ -33,6 +33,22 @@
 				currentWindow = remote.getCurrentWindow();
 				currentWindow.close();
 			};
+
+			//Button Maximize
+			const btnMaximize = document.getElementById("btnMaximize");
+			btnMaximize.onclick = (e) =>
+			{
+				currentWindow = remote.getCurrentWindow();
+				currentWindow.maximize();
+			};
+
+			//Button Minimize
+			const btnMinimize = document.getElementById("btnMinimize");
+			btnMinimize.onclick = (e) =>
+			{
+				currentWindow = remote.getCurrentWindow();
+				currentWindow.minimize();
+			};
 		}
 		</script>
 	</head>
