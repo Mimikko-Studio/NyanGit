@@ -20,37 +20,7 @@
 		<link rel="import" href="bower_components/paper-tooltip/paper-tooltip.html">
 		<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
 		<!-- Titlebar Button's functional -->
-		<script>
-		window.onload = () =>
-		{
-			const {remote} = require("electron");
-			let currentWindow = null;
-
-			//Button Close
-			const btnClose = document.getElementById("btnClose");
-			btnClose.onclick = (e) =>
-			{
-				currentWindow = remote.getCurrentWindow();
-				currentWindow.close();
-			};
-
-			//Button Maximize
-			const btnMaximize = document.getElementById("btnMaximize");
-			btnMaximize.onclick = (e) =>
-			{
-				currentWindow = remote.getCurrentWindow();
-				currentWindow.maximize();
-			};
-
-			//Button Minimize
-			const btnMinimize = document.getElementById("btnMinimize");
-			btnMinimize.onclick = (e) =>
-			{
-				currentWindow = remote.getCurrentWindow();
-				currentWindow.minimize();
-			};
-		}
-		</script>
+		<script src="src/js/titlebar-button-functional.js"></script>
 	</head>
 	<body>
 		<!-- App titlebar -->
@@ -62,7 +32,7 @@
 				</paper-button>
 				<!-- Button Maximize -->
 				<paper-button id="btnMaximize" class="custom titlebar-button">
-					<iron-icon icon="check-box-outline-blank" class="titlebar-button-icon"></iron-icon>
+					<iron-icon id="btnMaximize-icon" icon="check-box-outline-blank" class="titlebar-button-icon"></iron-icon>
 				</paper-button>
 				<!-- Button Minimize -->
 				<paper-button id="btnMinimize" class="custom titlebar-button">
