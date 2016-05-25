@@ -1,0 +1,93 @@
+:root
+{
+  --dark-primary-color:       #455A64;
+  --default-primary-color:    #607D8B;
+  --light-primary-color:      #CFD8DC;
+  --text-primary-color:       #FFFFFF;
+  --accent-color:             #FF5252;
+  --primary-background-color: #CFD8DC;
+  --primary-text-color:       #212121;
+  --secondary-text-color:     #727272;
+  --disabled-text-color:      #BDBDBD;
+  --divider-color:            #B6B6B6;
+
+  /* Components */
+
+   /* paper-toolbar */
+  --paper-toolbar-background: var(--default-primary-color);
+
+  /* paper-button */
+  --paper-button-background-color: var(--light-primary-color);
+  --paper-button-close-background-color: var(--accent-color);
+
+   /* paper-drawer-panel */
+  --drawer-menu-color:           #ffffff;
+  --drawer-border-color:         1px solid #ccc;
+   --drawer-toolbar-border-color: 1px solid rgba(0, 0, 0, 0.22);
+
+   /* paper-menu */
+  --paper-menu-background-color: #fff;
+   --menu-link-color:             #111111;
+
+  /* paper-input */
+  --paper-input-container-color:       rgba(255, 255, 255, 0.64);
+  --paper-input-container-focus-color: rgba(255, 255, 255, 1);
+  --paper-input-container-input-color: #fff;
+}
+
+body
+{
+  margin: auto;
+}
+
+.titlebar-outline
+{
+  background-color: var(--dark-primary-color);
+  padding: 4px 6px 0px 6px;
+  -webkit-app-region: no-drag;
+}
+
+.titlebar
+{
+  background-color: var(--dark-primary-color);
+  padding: 0px 0px 26px 0;
+  -webkit-app-region: drag;
+}
+
+paper-toolbar.custom-toolbar
+{
+  background-color: var(--paper-toolbar-background);
+}
+
+paper-button.titlebar-button
+{
+  width: 6px;
+  height: 6px;
+  float: right;
+  color: white;
+  margin: 0px;
+  min-width: 3em;
+  -webkit-app-region: no-drag;
+}
+
+paper-button.titlebar-button:hover
+{
+  background-color: var(--default-primary-color);
+}
+
+paper-button.titlebar-button-close
+{
+  width: 6px;
+  height: 6px;
+  float: right;
+  float: top;
+  color: white;
+  margin: 0px;
+  min-width: 3em;
+  -webkit-app-region: no-drag;
+}
+
+paper-button.titlebar-button-close:hover
+{
+  background-color: var(--paper-button-close-background-color);
+}
