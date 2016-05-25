@@ -2,5 +2,6 @@
 	"name" : "NyanGit",
 	"version" : "0.0.1",
 	"author" : "Chatchai Saratakij",
+	"description": "When a cat companion with git (Git GUI)",
 	"main" : "main.js"
 }
