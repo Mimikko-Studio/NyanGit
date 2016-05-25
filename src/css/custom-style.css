@@ -91,3 +91,9 @@ paper-button.titlebar-button-close:hover
 {
   background-color: var(--paper-button-close-background-color);
 }
+
+iron-icon.titlebar-button-icon
+{
+  width: 16px;
+  height: 16px;
+}
