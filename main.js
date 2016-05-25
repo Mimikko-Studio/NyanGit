@@ -3,7 +3,7 @@ const {app} = electron;
 const {BrowserWindow} = electron;
 
 const width = 1024;
-const height = 768;
+const height = 600;
 
 let win = null;
 
