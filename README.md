@@ -1,2 +1,2 @@
 #NyanGit
-- When a cat companion with git.
+- When a cat companion with git. (Git GUI)
