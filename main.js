@@ -5,7 +5,8 @@ const {BrowserWindow} = electron;
 const width = 1024;
 const height = 768;
 
-let win;
+let win = null;
+
 
 function createWindow()
 {
@@ -23,6 +24,24 @@ function createWindow()
 	{
 		win = null;
 	});
+}
+
+const isShouldQuit = app.makeSingleInstance((commandline, workingDirectory) =>
+{
+	if (win)
+	{
+		if (win.isMinimized())
+		{
+			win.restore();
+		}
+		win.focus();
+	}
+});
+
+if (isShouldQuit)
+{
+	app.quit();
+	return;
 }
 
 app.on("ready", createWindow);
