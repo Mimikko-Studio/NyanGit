@@ -7,7 +7,6 @@ const height = 768;
 
 let win = null;
 
-
 function createWindow()
 {
 	win = new BrowserWindow(
