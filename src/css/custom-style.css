@@ -59,6 +59,11 @@ paper-toolbar.custom-toolbar
   background-color: var(--paper-toolbar-background);
 }
 
+paper-toolbar.custom-toolbar-drawer
+{
+  background-color: var(--accent-color);
+}
+
 paper-button.titlebar-button
 {
   width: 6px;
