@@ -15,7 +15,7 @@
 
    /* paper-toolbar */
   --paper-toolbar-background: var(--default-primary-color);
-  --paper-toolbar-drawer-background: var(--default-primary-color);
+  --paper-toolbar-drawer-background: var(--drawer-menu-color);
 
   /* paper-button */
   --paper-button-background-color: var(--light-primary-color);
