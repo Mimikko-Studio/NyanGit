@@ -4,15 +4,15 @@ window.onload = () =>
 	let currentWindow = remote.getCurrentWindow();
 
 	//Button Close
-	const btnClose = document.getElementById("btnClose");
+	const btnClose = document.getElementById("button-close");
 	btnClose.onclick = (e) =>
 	{
 		currentWindow.close();
 	};
 
 	//Button Maximize
-	const btnMaximize = document.getElementById("btnMaximize");
-	const btnMaximize_icon = document.getElementById("btnMaximize-icon");
+	const btnMaximize = document.getElementById("button-maximize");
+	const btnMaximize_icon = document.getElementById("button-maximize-icon");
 	const maximize_icon = "check-box-outline-blank";
 	const restore_icon = "flip-to-front";
 	btnMaximize.onclick = (e) =>
@@ -34,7 +34,7 @@ window.onload = () =>
 	});
 
 	//Button Minimize
-	const btnMinimize = document.getElementById("btnMinimize");
+	const btnMinimize = document.getElementById("button-minimize");
 	btnMinimize.onclick = (e) =>
 	{
 		currentWindow.minimize();
