@@ -2,7 +2,7 @@ window.onload = () =>
 {
 	const {remote} = require("electron");
 	let currentWindow = remote.getCurrentWindow();
-
+	
 	//Button Close
 	const btnClose = document.getElementById("button-close");
 	btnClose.onclick = (e) =>

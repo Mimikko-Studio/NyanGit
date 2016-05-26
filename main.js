@@ -5,6 +5,12 @@ const {BrowserWindow} = electron;
 const width = 1024;
 const height = 600;
 
+const {Menu} = electron;
+const menuTemplate = [];
+const menu = Menu.buildFromTemplate(menuTemplate);
+
+Menu.setApplicationMenu(menu);
+
 let win = null;
 
 function createWindow()
@@ -13,6 +19,7 @@ function createWindow()
 	{
 		width: width,
 		height: height,
+		title: "NyanGit",
 		frame: false
 	});
 
