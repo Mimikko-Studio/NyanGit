@@ -1,5 +1,3 @@
-<!-- Experiment mode -->
-<!-- Please load (index.html) once experiment is complete -->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -35,9 +33,11 @@
       				<div class="Title">
       					<h2 style="color: var(--primary-text-color)">NyanGit</h2>
       				</div>
-      				<div style="background-color: black"></div>
    				</paper-toolbar>
-    			<div> Drawer content... </div>
+    			<!-- Drawer content... -->
+    			<div>
+    				
+    			</div>
   			</paper-header-panel>
   			<!-- Main -->
   			<paper-header-panel main>
@@ -63,12 +63,14 @@
 					<paper-toolbar class="medium-tall custom-toolbar">
 						<paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
 					<!-- Title -->
-					<div class="title" style="text-align: right; -webkit-user-select: none">
-						<span id="lblCurrentRepository" style="font-size: 26px; font-weight: bold">Tic-Tac-Toe</span>
+					<div class="title" style="text-align: right; -webkit-user-select: none;">
+						<span id="lblCurrentRepository" style="font-size: 26px; font-weight: bold">Repository</span>
 						<span>[</span>
-						<span id="lblCurrentBranch" style="font-size: 18px; font-style: italic">master</span>
+						<span id="lblCurrentBranch" style="font-size: 18px; font-style: italic">branch</span>
 						<span>]</span>
 					</div>
+					<!-- Exits branch drop down menu -->
+					<div></div>
 					<paper-icon-button id="btnSwitchBranch" icon="arrow-drop-down"></paper-icon-button>
 					<span style="-webkit-user-select: none">|</span>
 					<paper-icon-button id="btnBranch" icon="communication:call-split"></paper-icon-button>
