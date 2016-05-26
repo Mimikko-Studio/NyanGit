@@ -1,17 +1,22 @@
 const electron = require("electron");
 const {app} = electron;
+const {Menu} = electron;
 const {BrowserWindow} = electron;
 
 const width = 1024;
 const height = 600;
 
-const {Menu} = electron;
-const menuTemplate = [];
-const menu = Menu.buildFromTemplate(menuTemplate);
-
-Menu.setApplicationMenu(menu);
+let menu = null;
+let menuTemplate = null;
 
 let win = null;
+
+function createMenu()
+{
+	menuTemplate = [];
+	menu = Menu.buildFromTemplate(menuTemplate);
+	Menu.setApplicationMenu(menu);
+}
 
 function createWindow()
 {
@@ -50,7 +55,11 @@ if (isShouldQuit)
 	return;
 }
 
-app.on("ready", createWindow);
+app.on("ready", () =>
+{
+	createMenu();
+	createWindow();
+});
 
 app.on("window-all-closed", () =>
 {
