@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+		<!-- Import Custom Style -->
+		<link rel="stylesheet" href="../css/custom-style.css">
+		<!-- Import Polymer Components -->
+		<link rel="import" href="../../bower_components/polymer/polymer.html">
+		<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+		<link rel="import" href="../../bower_components/neon-animation/neon-animation.html">
+		<link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
+		<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+		<link rel="import" href="../../bower_components/iron-icons/communication-icons.html">
+		<link rel="import" href="../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+		<link rel="import" href="../../bower_components/paper-listbox/paper-listbox.html">
+		<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+		<link rel="import" href="../../bower_components/paper-drawer-panel/paper-drawer-panel.html">
+		<link rel="import" href="../../bower_components/paper-header-panel/paper-header-panel.html">
+		<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+		<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+		<link rel="import" href="../../bower_components/paper-tooltip/paper-tooltip.html">
+		<script src="../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+		<!-- Titlebar Button's functional -->
+		<script src="../js/titlebar-button-functional.js"></script>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<paper-drawer-panel force-narrow>
+			<!-- Drawer -->
+  			<paper-header-panel drawer>
+    			<paper-toolbar class="medium custom-toolbar-drawer">
+      				<div class="Title">
+      					<h2 style="color: var(--primary-text-color)">NyanGit</h2>
+      				</div>
+   				</paper-toolbar>
+    			<!-- Drawer content... -->
+    			<div>
+    				
+    			</div>
+  			</paper-header-panel>
+  			<!-- Main -->
+  			<paper-header-panel main>
+   				<!-- App titlebar -->
+				<div class="titlebar-outline">
+					<div class="titlebar">
+						<!-- Button Close -->
+						<paper-button id="btnClose" class="titlebar-button-close">
+							<iron-icon icon="close" class="titlebar-button-icon"></iron-icon>
+						</paper-button>
+						<!-- Button Maximize -->
+						<paper-button id="btnMaximize" class="titlebar-button">
+							<iron-icon id="btnMaximize-icon" icon="check-box-outline-blank" class="titlebar-button-icon"></iron-icon>
+						</paper-button>
+						<!-- Button Minimize -->
+						<paper-button id="btnMinimize" class="titlebar-button">
+							<iron-icon icon="remove" class="titlebar-button-icon"></iron-icon>
+						</paper-button>
+					</div>
+				</div>
+				<!-- Primary header (set class to medium or medium-tall depends on expand-more -->
+				<div>
+					<paper-toolbar class="medium-tall custom-toolbar">
+						<paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+					<!-- Title -->
+					<div class="title" style="text-align: right; -webkit-user-select: none;">
+						<span id="lblCurrentRepository" style="font-size: 26px; font-weight: bold">Repository</span>
+						<span>[</span>
+						<span id="lblCurrentBranch" style="font-size: 18px; font-style: italic">branch</span>
+						<span>]</span>
+					</div>
+					<!-- Exits branch drop down menu -->
+					<div></div>
+					<paper-icon-button id="btnSwitchBranch" icon="arrow-drop-down"></paper-icon-button>
+					<span style="-webkit-user-select: none">|</span>
+					<paper-icon-button id="btnBranch" icon="communication:call-split"></paper-icon-button>
+					<!-- Middle Title -->
+					<span class="middle title"></span>
+						<div class="middle">
+							<paper-icon-button icon="more-vert"></paper-icon-button>
+						</div>
+					</paper-toolbar>
+				</div>
+  			</paper-header-panel>
+		</paper-drawer-panel>
+	</body>
+</html>

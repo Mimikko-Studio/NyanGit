@@ -16,7 +16,7 @@ function createWindow()
 		frame: false
 	});
 
-	win.loadURL("file://" + __dirname + "/index.html");
+	win.loadURL("file://" + __dirname + "/src/html/app.html");
 	win.webContents.openDevTools();
 
 	win.on("closed", () =>
