@@ -103,3 +103,8 @@ iron-icon.titlebar-button-icon
   width: 16px;
   height: 16px;
 }
+
+paper-icon-button.header-icon-button:hover
+{
+  color: var(--dark-primary-color);
+}
