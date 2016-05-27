@@ -24,6 +24,7 @@
 		<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
 		<link rel="import" href="../../bower_components/paper-tooltip/paper-tooltip.html">
 		<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+		<link rel="import" href="../../bower_components/paper-badge/paper-badge.html">
 		<script src="../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
 		<!-- Titlebar Button's functional -->
 		<script src="../js/titlebar-button-functional.js"></script>
@@ -112,24 +113,48 @@
 						<span>]</span>
 					</div>
 					<!-- Exits branch drop down menu -->
-					<div></div>
+					<div>
+						
+					</div>
 					<paper-icon-button id="btnSwitchBranch" icon="arrow-drop-down"></paper-icon-button>
 					<span style="-webkit-user-select: none">|</span>
 					<paper-icon-button id="btnBranch" icon="communication:call-split"></paper-icon-button>
 					<!-- Middle Title -->
 					<span class="middle title"></span>
-						<div class="middle">
 							<!-- Clone/New Repository -->
-							<paper-icon-button id="button-clone-repository" icon="av:add-to-queue"></paper-icon-button>
+							<paper-icon-button id="button-clone-repository" icon="av:add-to-queue" class="middle"></paper-icon-button>
+								<paper-tooltip for="button-clone-repository" offset="0">Clone/New</paper-tooltip>
+							<!-- Seperator -->
+							<span style="-webkit-user-select: none" class="middle">|</span>
 							<!-- Fetch -->
+							<paper-icon-button id="button-fetch" icon="av:add-to-queue" class="middle"></paper-icon-button>
+								<paper-tooltip for="button-fetch" offset="0">Fetch</paper-tooltip>
 							<!-- Pull -->
+							<paper-icon-button id="button-pull" icon="av:add-to-queue" class="middle"></paper-icon-button>
+								<paper-tooltip for="button-pull" offset="0">Pull</paper-tooltip>
+								<paper-badge id="label-remain-pull" for="button-pull" label="0"></paper-badge>
 							<!-- Push -->
+							<paper-icon-button id="button-push" icon="av:add-to-queue" class="middle"></paper-icon-button>
+								<paper-tooltip for="button-push" offset="0">Push</paper-tooltip>
+								<paper-badge id="label-remain-push" for="button-push" label="0"></paper-badge>
+							<!-- Seperator -->
+							<span style="-webkit-user-select: none" class="middle">|</span>
 							<!-- Merge -->
+							<paper-icon-button id="button-merge" icon="av:add-to-queue" class="middle"></paper-icon-button>
+								<paper-tooltip for="button-merge" offset="0">Merge</paper-tooltip>
+							<!-- Seperator -->
+							<span style="-webkit-user-select: none" class="middle">|</span>
 							<!-- Explorer -->
+							<paper-icon-button id="button-explorer" icon="av:add-to-queue" class="middle"></paper-icon-button>
+								<paper-tooltip for="button-explorer" offset="0">Explorer</paper-tooltip>
 							<!-- Git Cli -->
+							<paper-icon-button id="button-ternimal" icon="av:add-to-queue" class="middle"></paper-icon-button>
+								<paper-tooltip for="button-ternimal" offset="0">Terminal</paper-tooltip>
+							<!-- Seperator -->
+							<span style="-webkit-user-select: none" class="middle">|</span>
 							<!-- More options -->
-							<paper-icon-button icon="more-vert"></paper-icon-button>
-						</div>
+							<paper-icon-button id="button-option" icon="more-vert" class="middle"></paper-icon-button>
+								<paper-tooltip for="button-option" offset="0">Options</paper-tooltip>
 					</paper-toolbar>
 				</div>
   			</paper-header-panel>

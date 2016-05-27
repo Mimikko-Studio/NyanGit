@@ -1,7 +1,15 @@
 {
-	"name" : "NyanGit",
-	"version" : "0.0.1",
-	"author" : "Chatchai Saratakij",
-	"description": "When a cat companion with git (Git GUI)",
-	"main" : "main.js"
+  "name": "NyanGit",
+  "version": "0.0.1",
+  "author": "Chatchai Saratakij",
+  "description": "When a cat companion with git (Git GUI)",
+  "license" : "MIT",
+  "repository" : {
+  	"type" : "git",
+  	"url" : "git://github.com/Mimikko-Studio/NyanGit.git"
+  },
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^0.4.1"
+  }
 }
