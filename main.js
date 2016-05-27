@@ -11,6 +11,7 @@ let menuTemplate = null;
 
 let win = null;
 
+
 function createMenu()
 {
 	menuTemplate = [];
@@ -37,6 +38,12 @@ function createWindow()
 	});
 }
 
+function initializeApplication()
+{
+	createMenu();
+	createWindow();
+}
+
 const isShouldQuit = app.makeSingleInstance((commandline, workingDirectory) =>
 {
 	if (win)
@@ -57,8 +64,7 @@ if (isShouldQuit)
 
 app.on("ready", () =>
 {
-	createMenu();
-	createWindow();
+	initializeApplication();
 });
 
 app.on("window-all-closed", () =>
@@ -73,6 +79,6 @@ app.on("activate", () =>
 {
 	if (win === null)
 	{
-		createWindow();
+		initializeApplication();
 	}
 });
