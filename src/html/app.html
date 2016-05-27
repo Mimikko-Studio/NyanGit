@@ -13,6 +13,9 @@
 		<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
 		<link rel="import" href="../../bower_components/iron-icons/communication-icons.html">
 		<link rel="import" href="../../bower_components/iron-icons/av-icons.html">
+		<link rel="import" href="../../bower_components/iron-icons/notification-icons.html">
+		<link rel="import" href="../../bower_components/iron-icons/image-icons.html">
+		<link rel="import" href="../../bower_components/iron-icons/editor-icons.html">
 		<link rel="import" href="../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
 		<link rel="import" href="../../bower_components/paper-listbox/paper-listbox.html">
 		<link rel="import" href="../../bower_components/paper-item/paper-item.html">
@@ -62,7 +65,7 @@
   						<!-- All repository -->
   						<paper-submenu>
   							<paper-item class="menu-trigger">
-  								<iron-icon icon="folder-open"></iron-icon>
+  								<iron-icon icon="description"></iron-icon>
   								<div style="-webkit-user-select: none; margin-left: 16px">All</div>
   							</paper-item>
   							<paper-menu class="menu-content">
@@ -121,40 +124,32 @@
 					<paper-icon-button id="btnBranch" icon="communication:call-split"></paper-icon-button>
 					<!-- Middle Title -->
 					<span class="middle title"></span>
-							<!-- Clone/New Repository -->
-							<paper-icon-button id="button-clone-repository" icon="av:add-to-queue" class="middle"></paper-icon-button>
-								<paper-tooltip for="button-clone-repository" offset="0" class="middle">Clone/New</paper-tooltip>
-							<!-- Seperator -->
-							<span style="-webkit-user-select: none" class="middle">|</span>
-							<!-- Fetch -->
-							<paper-icon-button id="button-fetch" icon="av:add-to-queue" class="middle"></paper-icon-button>
-								<paper-tooltip for="button-fetch" offset="0" class="middle">Fetch</paper-tooltip>
-							<!-- Pull -->
-							<paper-icon-button id="button-pull" icon="av:add-to-queue" class="middle"></paper-icon-button>
-								<paper-tooltip for="button-pull" offset="0" class="middle">Pull</paper-tooltip>
-								<paper-badge id="label-remain-pull" for="button-pull" label="0" class="middle" style="-webkit-user-select: none; visibility: hidden"></paper-badge>
-							<!-- Push -->
-							<paper-icon-button id="button-push" icon="av:add-to-queue" class="middle"></paper-icon-button>
-								<paper-tooltip for="button-push" offset="0" class="middle">Push</paper-tooltip>
-								<paper-badge id="label-remain-push" for="button-push" label="0" class="middle" style="-webkit-user-select: none; visibility: hidden"></paper-badge>
-							<!-- Seperator -->
-							<span style="-webkit-user-select: none" class="middle">|</span>
-							<!-- Merge -->
-							<paper-icon-button id="button-merge" icon="av:add-to-queue" class="middle"></paper-icon-button>
-								<paper-tooltip for="button-merge" offset="0" class="middle">Merge</paper-tooltip>
-							<!-- Seperator -->
-							<span style="-webkit-user-select: none" class="middle">|</span>
-							<!-- Explorer -->
-							<paper-icon-button id="button-explorer" icon="av:add-to-queue" class="middle"></paper-icon-button>
-								<paper-tooltip for="button-explorer" offset="0" class="middle">Explorer</paper-tooltip>
-							<!-- Git Cli -->
-							<paper-icon-button id="button-ternimal" icon="av:add-to-queue" class="middle"></paper-icon-button>
-								<paper-tooltip for="button-ternimal" offset="0" class="middle">Terminal</paper-tooltip>
-							<!-- Seperator -->
-							<span style="-webkit-user-select: none" class="middle">|</span>
-							<!-- More options -->
-							<paper-icon-button id="button-option" icon="more-vert" class="middle"></paper-icon-button>
-								<paper-tooltip for="button-option" offset="0" class="middle">Options</paper-tooltip>
+						<!-- Clone/New Repository -->
+						<paper-icon-button id="button-clone-repository" icon="av:queue" class="middle"></paper-icon-button>
+							<paper-tooltip for="button-clone-repository" offset="0" class="middle">Clone/New</paper-tooltip>
+						<!-- Fetch -->
+						<paper-icon-button id="button-fetch" icon="image:rotate-left" class="middle"></paper-icon-button>
+							<paper-tooltip for="button-fetch" offset="0" class="middle">Fetch</paper-tooltip>
+						<!-- Pull -->
+						<paper-icon-button id="button-pull" icon="file-download" class="middle"></paper-icon-button>
+							<paper-tooltip for="button-pull" offset="0" class="middle">Pull</paper-tooltip>
+							<paper-badge id="label-remain-pull" for="button-pull" label="0" class="middle" style="-webkit-user-select: none; visibility: hidden"></paper-badge>
+						<!-- Push -->
+						<paper-icon-button id="button-push" icon="editor:publish" class="middle"></paper-icon-button>
+							<paper-tooltip for="button-push" offset="0" class="middle">Push</paper-tooltip>
+							<paper-badge id="label-remain-push" for="button-push" label="0" class="middle" style="-webkit-user-select: none; visibility: hidden"></paper-badge>
+						<!-- Merge -->
+						<paper-icon-button id="button-merge" icon="communication:call-merge" class="middle"></paper-icon-button>
+							<paper-tooltip for="button-merge" offset="0" class="middle">Merge</paper-tooltip>
+						<!-- Explorer -->
+						<paper-icon-button id="button-explorer" icon="folder-open" class="middle"></paper-icon-button>
+							<paper-tooltip for="button-explorer" offset="0" class="middle">Explorer</paper-tooltip>
+						<!-- Terminal -->
+						<paper-icon-button id="button-ternimal" icon="code" class="middle"></paper-icon-button>
+							<paper-tooltip for="button-ternimal" offset="0" class="middle">Terminal</paper-tooltip>
+						<!-- Options -->
+						<paper-icon-button id="button-option" icon="more-vert" class="middle"></paper-icon-button>
+							<paper-tooltip for="button-option" offset="0" class="middle">Options</paper-tooltip>
 					</paper-toolbar>
 				</div>
   			</paper-header-panel>
