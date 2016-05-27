@@ -28,6 +28,9 @@
 		<link rel="import" href="../../bower_components/paper-tooltip/paper-tooltip.html">
 		<link rel="import" href="../../bower_components/paper-input/paper-input.html">
 		<link rel="import" href="../../bower_components/paper-badge/paper-badge.html">
+		<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+		<link rel="import" href="../../bower_components/paper-tabs/paper-tab.html">
+		<!-- Polymer functional -->
 		<script src="../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
 		<!-- Titlebar Button's functional -->
 		<script src="../js/titlebar-button-functional.js"></script>
@@ -128,17 +131,28 @@
 						<!-- Merge -->
 						<paper-icon-button id="button-merge" icon="communication:call-merge" class="middle"></paper-icon-button>
 							<paper-tooltip for="button-merge" offset="0" class="middle">Merge</paper-tooltip>
-						<!-- Explorer -->
+						<!-- Seperate this to option menu -->
+						<!--
+						
 						<paper-icon-button id="button-explorer" icon="folder-open" class="middle"></paper-icon-button>
 							<paper-tooltip for="button-explorer" offset="0" class="middle">Explorer</paper-tooltip>
-						<!-- Terminal -->
+						
 						<paper-icon-button id="button-ternimal" icon="code" class="middle"></paper-icon-button>
 							<paper-tooltip for="button-ternimal" offset="0" class="middle">Terminal</paper-tooltip>
+						-->
 						<!-- Options -->
 						<paper-icon-button id="button-option" icon="more-vert" class="middle"></paper-icon-button>
 							<paper-tooltip for="button-option" offset="0" class="middle">Options</paper-tooltip>
 					</paper-toolbar>
 				</div>
+				<!-- Contents -->
+  				<div>
+  					<!-- Tabs -->
+					<paper-tabs selected="0" align-bottom style="color: white; background-color: var(--dark-primary-color)">
+  						<paper-tab>Change</paper-tab>
+  						<paper-tab>History</paper-tab>
+					</paper-tabs>
+  				</div>
   			</paper-header-panel>
 		</paper-drawer-panel>
 	</body>
