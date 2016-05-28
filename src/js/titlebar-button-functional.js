@@ -1,4 +1,4 @@
-window.onload = () =>
+window.addEventListener("load", () =>
 {
 	const {remote} = require("electron");
 	let currentWindow = remote.getCurrentWindow();
@@ -44,4 +44,4 @@ window.onload = () =>
 	{
 		currentWindow.minimize();
 	});
-}
+});

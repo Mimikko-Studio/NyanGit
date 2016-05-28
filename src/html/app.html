@@ -36,6 +36,9 @@
 		<script src="../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
 		<!-- Titlebar Button's functional -->
 		<script src="../js/titlebar-button-functional.js"></script>
+		<!-- Tabs functional -->
+		<script src="../js/tab-change-functional.js"></script>
+		<script src="../js/tab-history-functional.js"></script>
 	</head>
 	<body>
 		<!-- Navigation -->
@@ -198,25 +201,4 @@
   			</paper-header-panel>
 		</paper-drawer-panel>
 	</body>
-	<!-- Tabs functional -->
-	<script>
-						
-		const changes_page_index = 0;
-		const history_page_index = 1;
-
-		let pages = document.getElementById("pages-tabs-content");
-		let btnTabChange = document.getElementById("button-tab-change");
-		let btnTabHistory = document.getElementById("button-tab-history");
-
-		btnTabChange.addEventListener("tap", (e) =>
-		{
-			pages.selected = changes_page_index;
-		});
-
-		btnTabHistory.addEventListener("tap", (e) =>
-		{
-			pages.selected = history_page_index;
-		});
-
-	</script>
 </html>
