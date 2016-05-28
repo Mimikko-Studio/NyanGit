@@ -165,37 +165,58 @@
   							<paper-tab id="button-tab-change">Changes</paper-tab>
   							<paper-tab id="button-tab-history">History</paper-tab>
 						</paper-tabs>
+					</div>
 					<!-- Tabs content -->
-					<iron-pages id="pages-tabs-content" selected="0">
-						<!-- Changes page -->
-						<div>Changes page.</div>
-						<!-- History page -->
-						<div>History page.</div>
-					</iron-pages>
-					<!-- Tabs functional -->
-					<script>
-						
-						const changes_page_index = 0;
-						const history_page_index = 1;
+					<div>
+						<iron-pages id="pages-tabs-content" selected="0">
+							<!-- Changes page -->
+							<div>
+								<!-- Stash form -->
+								<div>
+									<div class="page-container">
+										<!-- Stage file -->
+										<div style="background-color: black; float: left; width: 50%; height: 100%">
 
-						let pages = document.getElementById("pages-tabs-content");
-						let btnTabChange = document.getElementById("button-tab-change");
-						let btnTabHistory = document.getElementById("button-tab-history");
-
-						btnTabChange.addEventListener("tap", (e) =>
-						{
-							pages.selected = changes_page_index;
-						});
-
-						btnTabHistory.addEventListener("tap", (e) =>
-						{
-							pages.selected = history_page_index;
-						});
-
-					</script>
+										</div>
+										<!-- UnStage file -->
+										<div style="background-color: green; float: right; width: 50%; height: 100%">
+											
+										</div>
+									</div>
+								</div>
+								<!-- Commit bar -->
+								<div>
+									<div style="position: fixed; bottom: 0px; width: 100%; height: 20px; background-color: var(--dark-primary-color)">
+									</div>
+								</div>
+							</div>
+							<!-- History page -->
+							<div>History page.</div>
+						</iron-pages>
 					</div>
   				</div>
   			</paper-header-panel>
 		</paper-drawer-panel>
 	</body>
+	<!-- Tabs functional -->
+	<script>
+						
+		const changes_page_index = 0;
+		const history_page_index = 1;
+
+		let pages = document.getElementById("pages-tabs-content");
+		let btnTabChange = document.getElementById("button-tab-change");
+		let btnTabHistory = document.getElementById("button-tab-history");
+
+		btnTabChange.addEventListener("tap", (e) =>
+		{
+			pages.selected = changes_page_index;
+		});
+
+		btnTabHistory.addEventListener("tap", (e) =>
+		{
+			pages.selected = history_page_index;
+		});
+
+	</script>
 </html>
