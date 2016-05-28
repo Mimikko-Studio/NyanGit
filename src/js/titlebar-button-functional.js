@@ -5,16 +5,20 @@ window.onload = () =>
 	
 	//Button Close
 	const btnClose = document.getElementById("button-close");
+	
 	btnClose.addEventListener("tap", (e) =>
 	{
 		currentWindow.close();
 	});
 
 	//Button Maximize
+	
+	const restore_icon = "flip-to-front";
+	const maximize_icon = "check-box-outline-blank";
+
 	const btnMaximize = document.getElementById("button-maximize");
 	const btnMaximize_icon = document.getElementById("button-maximize-icon");
-	const maximize_icon = "check-box-outline-blank";
-	const restore_icon = "flip-to-front";
+	
 	btnMaximize.addEventListener("tap", (e) =>
 	{
 		if (currentWindow.isMaximized())
@@ -35,6 +39,7 @@ window.onload = () =>
 
 	//Button Minimize
 	const btnMinimize = document.getElementById("button-minimize");
+	
 	btnMinimize.addEventListener("tap", (e) =>
 	{
 		currentWindow.minimize();
