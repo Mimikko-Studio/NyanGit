@@ -8,6 +8,7 @@
 		<!-- Import Polymer Components -->
 		<link rel="import" href="../../bower_components/polymer/polymer.html">
 		<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+		<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
 		<link rel="import" href="../../bower_components/neon-animation/neon-animation.html">
 		<link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
 		<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
@@ -139,24 +140,59 @@
 							<paper-tooltip for="button-merge" offset="0">Merge</paper-tooltip>
 						<!-- Seperate this to option menu -->
 						<!--
+						Open git url
+						//
+						Open local git folder
+						//
 						<paper-icon-button id="button-explorer" icon="folder-open" class="middle"></paper-icon-button>
 							<paper-tooltip for="button-explorer" offset="0" class="middle">Explorer</paper-tooltip>
-						
+						Open git ternimal
+						//
 						<paper-icon-button id="button-ternimal" icon="code" class="middle"></paper-icon-button>
 							<paper-tooltip for="button-ternimal" offset="0" class="middle">Terminal</paper-tooltip>
+						Setting git info
 						-->
 						<!-- Options -->
-						<paper-icon-button id="button-option" icon="more-vert" class="middle header-icon-button"></paper-icon-button>
-							<paper-tooltip for="button-option" offset="0">Options</paper-tooltip>
+						<paper-icon-button id="button-option" icon="more-vert" class="header-icon-button middle">
+						<paper-tooltip for="button-option" offset="0">Options</paper-tooltip>
 					</paper-toolbar>
 				</div>
 				<!-- Contents -->
   				<div>
   					<!-- Tabs -->
-					<paper-tabs selected="0" align-bottom style="color: white; height: 42px; background-color: var(--dark-primary-color)">
-  						<paper-tab>Changes</paper-tab>
-  						<paper-tab>History</paper-tab>
-					</paper-tabs>
+  					<div>
+						<paper-tabs selected="0" align-bottom style="color: white; height: 42px; background-color: var(--dark-primary-color)">
+  							<paper-tab id="button-tab-change">Changes</paper-tab>
+  							<paper-tab id="button-tab-history">History</paper-tab>
+						</paper-tabs>
+					<!-- Tabs content -->
+					<iron-pages id="pages-tabs-content" selected="0">
+						<!-- Changes page -->
+						<div>Changes page.</div>
+						<!-- History page -->
+						<div>History page.</div>
+					</iron-pages>
+					<!-- Tabs functional -->
+					<script>
+						
+						let btnTabChange = document.getElementById("button-tab-change");
+						let btnTabHistory = document.getElementById("button-tab-history");
+						let pages = document.getElementById("pages-tabs-content");
+
+						//button tab change functional
+						btnTabChange.addEventListener("click", (e) =>
+						{
+							pages.selected = 0;
+						});
+
+						//button tab history functional
+						btnTabHistory.addEventListener("click", (e) =>
+						{
+							pages.selected = 1;
+						});
+
+					</script>
+					</div>
   				</div>
   			</paper-header-panel>
 		</paper-drawer-panel>
