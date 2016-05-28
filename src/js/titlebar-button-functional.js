@@ -5,17 +5,17 @@ window.onload = () =>
 	
 	//Button Close
 	const btnClose = document.getElementById("button-close");
-	btnClose.onclick = (e) =>
+	btnClose.addEventListener("tap", (e) =>
 	{
 		currentWindow.close();
-	};
+	});
 
 	//Button Maximize
 	const btnMaximize = document.getElementById("button-maximize");
 	const btnMaximize_icon = document.getElementById("button-maximize-icon");
 	const maximize_icon = "check-box-outline-blank";
 	const restore_icon = "flip-to-front";
-	btnMaximize.onclick = (e) =>
+	btnMaximize.addEventListener("tap", (e) =>
 	{
 		if (currentWindow.isMaximized())
 		{
@@ -25,7 +25,7 @@ window.onload = () =>
 		{
 			currentWindow.maximize();
 		}
-	};
+	});
 
 	//Change titlebar maximize button's icon related to window state.
 	currentWindow.on("resize", () =>
@@ -35,8 +35,8 @@ window.onload = () =>
 
 	//Button Minimize
 	const btnMinimize = document.getElementById("button-minimize");
-	btnMinimize.onclick = (e) =>
+	btnMinimize.addEventListener("tap", (e) =>
 	{
 		currentWindow.minimize();
-	};
+	});
 }

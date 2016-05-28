@@ -161,7 +161,7 @@
   				<div>
   					<!-- Tabs -->
   					<div>
-						<paper-tabs selected="0" align-bottom style="color: white; height: 42px; background-color: var(--dark-primary-color)">
+						<paper-tabs selected="0" align-bottom disable-drag style="color: white; height: 42px; background-color: var(--dark-primary-color)">
   							<paper-tab id="button-tab-change">Changes</paper-tab>
   							<paper-tab id="button-tab-history">History</paper-tab>
 						</paper-tabs>
@@ -175,20 +175,21 @@
 					<!-- Tabs functional -->
 					<script>
 						
+						const changes_page_index = 0;
+						const history_page_index = 1;
+
+						let pages = document.getElementById("pages-tabs-content");
 						let btnTabChange = document.getElementById("button-tab-change");
 						let btnTabHistory = document.getElementById("button-tab-history");
-						let pages = document.getElementById("pages-tabs-content");
 
-						//button tab change functional
-						btnTabChange.addEventListener("click", (e) =>
+						btnTabChange.addEventListener("tap", (e) =>
 						{
-							pages.selected = 0;
+							pages.selected = changes_page_index;
 						});
 
-						//button tab history functional
-						btnTabHistory.addEventListener("click", (e) =>
+						btnTabHistory.addEventListener("tap", (e) =>
 						{
-							pages.selected = 1;
+							pages.selected = history_page_index;
 						});
 
 					</script>
