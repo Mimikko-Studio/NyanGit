@@ -111,8 +111,12 @@ paper-icon-button.header-icon-button:hover
 
 .page-container
 {
-  position: fixed;
   right: 0;
   left: 0;
-  height: 100%;
+  bottom: 1%;
+  top: 206px;
+  max-height: 100%;
+  padding: 0;
+  overflow: auto;
+  position: fixed;
 }
