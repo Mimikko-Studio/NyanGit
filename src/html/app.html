@@ -48,6 +48,14 @@
 			{
 				--paper-toolbar-height: 32px;
 			}
+			paper-item.custom-file-add
+			{
+				--paper-item-focused:
+				{
+					color: white;
+					background-color: rgb(232, 255, 202);
+				};
+			}
 		</style>
 	</head>
 	<body style="height: 100%">
@@ -189,14 +197,14 @@
 									<div>
 										<paper-menu style="padding: 0">
 
-  											<paper-item style="padding: 0">
+  											<paper-item style="padding: 0" class="custom-file-add">
   												<paper-checkbox style="padding: 1% 4em 1%">
   													<div style="-webkit-user-select: none">File A</div>
   												</paper-checkbox>
   												<iron-icon icon="add" style="color: white; background-color: #8BC34A; margin-left: auto"></iron-icon>
   												<div style="padding-left: 3%"></div>
   											</paper-item>
-  											<paper-item style="padding: 0">
+  											<paper-item style="padding: 0" class="custom-file-add">
   												<paper-checkbox style="padding: 1% 4em 1%">
   													<div style="-webkit-user-select: none">File B</div>
   												</paper-checkbox>
@@ -226,10 +234,10 @@
 								</div>
 								<!-- Commit bar -->
 								<div style="width: 100%; position: fixed; bottom: 0">
-								<paper-toolbar class="medium custom-commit-toolbar">
-											<div class="title"></div>
+									<paper-toolbar class="medium custom-commit-toolbar">
+										<div class="title"></div>
 											<paper-toggle-button style="height: 10px; padding: 0px; margin: 0px;"></paper-toggle-button>
-								</paper-toolbar>
+									</paper-toolbar>
 								</div>
 							</div>
 						</div>
