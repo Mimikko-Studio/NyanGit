@@ -35,6 +35,7 @@
 		<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
 		<link rel="import" href="../../bower_components/paper-toggle-button/paper-toggle-button.html">
 		<link rel="import" href="../../bower_components/paper-progress/paper-progress.html">
+		<link rel="import" href="../../bower_components/paper-item/paper-icon-item.html">
 		<!-- Polymer functional -->
 		<script src="../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
 		<!-- Titlebar Button's functional -->
@@ -53,24 +54,6 @@
 			paper-toolbar.custom-commit-toolbar ::shadow #topBar
 			{
 				padding: 0 6px 0 0;
-			}
-
-			paper-item.custom-file-add
-			{
-				--paper-item-focused:
-				{
-					color: white;
-					background-color: rgb(224, 253, 186);
-				};
-			}
-
-			paper-item.custom-file-delete
-			{
-				--paper-item-focused:
-				{
-					color: white;
-					background-color: rgb(253, 227, 227);
-				};
 			}
 		</style>
 	</head>
@@ -210,53 +193,75 @@
 							<!-- Stash form -->
 							<div class="page-container">
 									<!-- Stage file -->
-									<div>
-										<paper-menu style="padding: 0">
+									<div role="listbox">
 
-  											<paper-item style="padding: 0" class="custom-file-add">
-  												<paper-checkbox style="padding: 1% 4em 1%">
-  													<div style="-webkit-user-select: none">File A</div>
-  												</paper-checkbox>
-  												<iron-icon icon="add" style="color: white; background-color: #8BC34A; margin-left: auto"></iron-icon>
-  												<div style="padding-left: 48px"></div>
-  											</paper-item>
-  											<paper-item style="padding: 0" class="custom-file-add">
-  												<paper-checkbox style="padding: 1% 4em 1%">
-  													<div style="-webkit-user-select: none">File B</div>
-  												</paper-checkbox>
-  												<iron-icon icon="add" style="color: white; background-color: #8BC34A; margin-left: auto"></iron-icon>
-  												<div style="padding-left: 48px"></div>
-  											</paper-item>
+  										<!-- Add file -->
+  										<paper-icon-item id="file-1">
+  											<iron-icon icon="editor:insert-drive-file" style="padding-right: 2em"></iron-icon>
+  											<paper-checkbox style="padding-right: 1em">
+  												<div id="fileName" style="padding-left: 1em">cat_info.txt</div>
+  											</paper-checkbox>
+  											<div style="margin-right: auto"></div>
+  											<iron-icon icon="add" style="padding-right: 2em; color: white; background-color: #8BC34A"></iron-icon>
+  										</paper-icon-item>
 
-  											<paper-item style="padding: 0" class="custom-file-delete">
-  												<paper-checkbox style="padding: 1% 4em 1%">
-  													<div style="-webkit-user-select: none">File A</div>
-  												</paper-checkbox>
-  												<iron-icon icon="remove" style="color: white; background-color: #D32F2F; margin-left: auto"></iron-icon>
-  												<div style="padding-left: 48px"></div>
-  											</paper-item>
+  										<paper-icon-item id="file-2">
+  											<iron-icon icon="image:image" style="padding-right: 2em"></iron-icon>
+  											<paper-checkbox style="padding-right: 1em">
+  												<div id="fileName" style="padding-left: 1em">cat.png</div>
+  											</paper-checkbox>
+  											<div style="margin-right: auto"></div>
+  											<iron-icon icon="add" style="padding-right: 2em; color: white; background-color: #8BC34A"></iron-icon>
+  										</paper-icon-item>
 
-  											<paper-item style="padding: 0" class="custom-file-delete">
-  												<paper-checkbox style="padding: 1% 4em 1%">
-  													<div style="-webkit-user-select: none">File A</div>
-  												</paper-checkbox>
-  												<iron-icon icon="remove" style="color: white; background-color: #D32F2F; margin-left: auto"></iron-icon>
-  												<div style="padding-left: 48px"></div>
-  											</paper-item>
-  											
-  											
-  										</paper-menu>
+  										<!-- Remove file -->										
+										<paper-icon-item id="file-3">
+  											<iron-icon icon="editor:insert-drive-file" style="padding-right: 2em"></iron-icon>
+  											<paper-checkbox style="padding-right: 1em">
+  												<div id="fileName" style="padding-left: 1em">dog_info.txt</div>
+  											</paper-checkbox>
+  											<div style="margin-right: auto"></div>
+  											<iron-icon icon="remove" style="padding-right: 2em; color: white; background-color: #D32F2F"></iron-icon>
+  										</paper-icon-item>
+
+  										<paper-icon-item id="file-4">
+  											<iron-icon icon="image:image" style="padding-right: 2em"></iron-icon>
+  											<paper-checkbox style="padding-right: 1em">
+  												<div id="fileName" style="padding-left: 1em">dog.png</div>
+  											</paper-checkbox>
+  											<div style="margin-right: auto"></div>
+  											<iron-icon icon="remove" style="padding-right: 2em; color: white; background-color: #D32F2F"></iron-icon>
+  										</paper-icon-item>
+
 									</div>
 								</div>
 								<!-- Commit bar -->
 								<div style="width: 100%; position: fixed; bottom: 0">
 									<paper-toolbar class="medium custom-commit-toolbar">
 										<div class="title"></div>
+										<!-- Stage all file checkbox -->
+										<paper-checkbox class="custom-stage-all-file-checkbox">
+											<div style="padding-left: 4px; color: white">
+												Stage all files
+											</div>
+										</paper-checkbox>
+										<style is="custom-style">
+											paper-checkbox.custom-stage-all-file-checkbox
+											{
+												padding-right: 2em;
+											}
+											paper-checkbox.custom-stage-all-file-checkbox ::shadow #checkboxContainer #checkbox
+											{
+												border-color: white;
+											}
+										</style>
+										<!-- Commit button -->
 										<paper-button class="commit-button">
 											<div>Commit</div>
 											<iron-icon id="icoSave" icon="save"></iron-icon>
 										</paper-button>
-										<style is="custom">
+										<style is="custom-style">
+
 											paper-button.commit-button
 											{
 												margin: 0;
