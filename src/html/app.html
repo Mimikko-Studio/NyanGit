@@ -32,6 +32,7 @@
 		<link rel="import" href="../../bower_components/paper-badge/paper-badge.html">
 		<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
 		<link rel="import" href="../../bower_components/paper-tabs/paper-tab.html">
+		<link rel="import" href="../../bower_components/paper-toggle-button/paper-toggle-button.html">
 		<link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html">
 		<!-- Polymer functional -->
 		<script src="../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
@@ -177,7 +178,7 @@
 						<!-- Changes page -->
 						<div>
 							<!-- Stash form -->
-								<div class="page-container">
+							<div class="page-container">
 									<!-- Stage file -->
 									<div>
 										<paper-menu style="padding: 0">
@@ -216,10 +217,15 @@
   											
   										</paper-menu>
 									</div>
-							</div>
-							<!-- Commit bar -->
-							<div>
-								<div style="position: absolute; bottom: 0px; width: 100%; height: 8px; background-color: var(--dark-primary-color)">
+								</div>
+
+								<!-- Commit bar -->
+								<!-- Collapse state
+								<div style="position: absolute; bottom: 0px; width: 100%; height: 8px; background-color: var(--dark-primary-color); overflow: auto;">
+								</div>
+								
+								-->
+								<div style="position: fixed; bottom: 0px; width: 100%; height: 30px; background-color: var(--dark-primary-color); overflow: auto;">
 								</div>
 							</div>
 						</div>
