@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%">
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
@@ -53,12 +53,20 @@
 				--paper-item-focused:
 				{
 					color: white;
-					background-color: rgb(232, 255, 202);
+					background-color: rgb(224, 253, 186);
+				};
+			}
+			paper-item.custom-file-delete
+			{
+				--paper-item-focused:
+				{
+					color: white;
+					background-color: rgb(253, 227, 227);
 				};
 			}
 		</style>
 	</head>
-	<body style="height: 100%">
+	<body>
 		<!-- Navigation -->
 		<paper-drawer-panel drawer-focus-selector="" force-narrow>
 			<!-- Drawer -->
@@ -212,7 +220,7 @@
   												<div style="padding-left: 48px"></div>
   											</paper-item>
 
-  											<paper-item style="padding: 0">
+  											<paper-item style="padding: 0" class="custom-file-delete">
   												<paper-checkbox style="padding: 1% 4em 1%">
   													<div style="-webkit-user-select: none">File A</div>
   												</paper-checkbox>
@@ -220,7 +228,13 @@
   												<div style="padding-left: 48px"></div>
   											</paper-item>
 
-  											
+  											<paper-item style="padding: 0" class="custom-file-delete">
+  												<paper-checkbox style="padding: 1% 4em 1%">
+  													<div style="-webkit-user-select: none">File A</div>
+  												</paper-checkbox>
+  												<iron-icon icon="remove" style="color: white; background-color: #D32F2F; margin-left: auto"></iron-icon>
+  												<div style="padding-left: 48px"></div>
+  											</paper-item>
   											
   											
   										</paper-menu>
