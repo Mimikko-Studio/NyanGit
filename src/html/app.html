@@ -43,6 +43,12 @@
 		<!-- Tabs functional -->
 		<script src="../js/views/tab-change.js"></script>
 		<script src="../js/views/tab-history.js"></script>
+		<style is="custom-style">
+			paper-toolbar.custom-commit-toolbar
+			{
+				--paper-toolbar-height: 32px;
+			}
+		</style>
 	</head>
 	<body style="height: 100%">
 		<!-- Navigation -->
@@ -168,7 +174,7 @@
   				<div>
   					<!-- Tabs -->
   					<paper-header-panel>
-						<paper-tabs class="paper-header" selected="0" align-bottom disable-drag style="color: white; height: 42px; background-color: var(--dark-primary-color)">
+						<paper-tabs class="paper-header" selected="0" disable-drag style="color: white; height: 42px; background-color: var(--dark-primary-color)">
   							<paper-tab id="button-tab-change">Changes</paper-tab>
   							<paper-tab id="button-tab-history">History</paper-tab>
   						</paper-tabs>
@@ -218,14 +224,12 @@
   										</paper-menu>
 									</div>
 								</div>
-
 								<!-- Commit bar -->
-								<!-- Collapse state
-								<div style="position: absolute; bottom: 0px; width: 100%; height: 8px; background-color: var(--dark-primary-color); overflow: auto;">
-								</div>
-								
-								-->
-								<div style="position: fixed; bottom: 0px; width: 100%; height: 30px; background-color: var(--dark-primary-color); overflow: auto;">
+								<div style="width: 100%; position: fixed; bottom: 0">
+								<paper-toolbar class="medium custom-commit-toolbar">
+											<div class="title"></div>
+											<paper-toggle-button style="height: 10px; padding: 0px; margin: 0px;"></paper-toggle-button>
+								</paper-toolbar>
 								</div>
 							</div>
 						</div>
