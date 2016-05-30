@@ -194,50 +194,59 @@
 							<div class="page-container">
 									<!-- Stage file -->
 									<div role="listbox">
-
   										<!-- Add file -->
   										<paper-icon-item id="file-1">
   											<iron-icon icon="editor:insert-drive-file" style="padding-right: 2em"></iron-icon>
   											<paper-checkbox style="padding-right: 1em">
-  												<div id="fileName" style="padding-left: 1em; -webkit-user-select: none">cat_info.txt</div>
+  												<div id="fileName" style="-webkit-user-select: none">cat_info.txt</div>
   											</paper-checkbox>
   											<div style="margin-right: auto"></div>
-  											<iron-icon icon="add" style="padding-right: 2em; color: white; background-color: #8BC34A"></iron-icon>
+  											<div style="padding-right: 4em">
+  												<iron-icon icon="add" style="padding-right: 1em; color: white; background-color: #8BC34A"></iron-icon>
+  											</div>
   										</paper-icon-item>
 
   										<paper-icon-item id="file-2">
   											<iron-icon icon="image:image" style="padding-right: 2em"></iron-icon>
   											<paper-checkbox style="padding-right: 1em">
-  												<div id="fileName" style="padding-left: 1em; -webkit-user-select: none">cat.png</div>
+  												<div id="fileName" style="-webkit-user-select: none">cat.png</div>
   											</paper-checkbox>
   											<div style="margin-right: auto"></div>
-  											<iron-icon icon="add" style="padding-right: 2em; color: white; background-color: #8BC34A"></iron-icon>
+  											<div style="padding-right: 4em">
+  												<iron-icon icon="add" style="padding-right: 1em; color: white; background-color: #8BC34A"></iron-icon>
+  											</div>
   										</paper-icon-item>
 
   										<!-- Remove file -->										
 										<paper-icon-item id="file-3">
   											<iron-icon icon="editor:insert-drive-file" style="padding-right: 2em"></iron-icon>
   											<paper-checkbox style="padding-right: 1em">
-  												<div id="fileName" style="padding-left: 1em; -webkit-user-select: none">dog_info.txt</div>
+  												<div id="fileName" style="-webkit-user-select: none">dog_info.txt</div>
   											</paper-checkbox>
   											<div style="margin-right: auto"></div>
-  											<iron-icon icon="remove" style="padding-right: 2em; color: white; background-color: #D32F2F"></iron-icon>
+  											<div style="padding-right: 4em">
+  												<iron-icon icon="remove" style="padding-right: 1em; color: white; background-color: #D32F2F"></iron-icon>
+  											</div>
   										</paper-icon-item>
 
   										<paper-icon-item id="file-4">
   											<iron-icon icon="image:image" style="padding-right: 2em"></iron-icon>
   											<paper-checkbox style="padding-right: 1em">
-  												<div id="fileName" style="padding-left: 1em; -webkit-user-select: none">dog.png</div>
+  												<div id="fileName" style="-webkit-user-select: none">dog.png</div>
   											</paper-checkbox>
   											<div style="margin-right: auto"></div>
-  											<iron-icon icon="remove" style="padding-right: 2em; color: white; background-color: #D32F2F"></iron-icon>
+  											<div style="padding-right: 4em">
+  												<iron-icon icon="remove" style="padding-right: 1em; color: white; background-color: #D32F2F"></iron-icon>
+  											</div>
   										</paper-icon-item>
-
 									</div>
 								</div>
 								<!-- Commit bar -->
 								<div style="width: 100%; position: fixed; bottom: 0">
 									<paper-toolbar class="medium custom-commit-toolbar">
+										<div style="color: white; background-color: var(--dark-primary-color); height: 32px">
+											<div id="lblTotalChanges" style="padding: 8px 32px 8px 12px; -webkit-user-select: none">4 changes</div>
+										</div>
 										<div class="title"></div>
 										<!-- Stage all file checkbox -->
 										<paper-checkbox id="checkbox-stage-all-file" class="custom-stage-all-file-checkbox">
