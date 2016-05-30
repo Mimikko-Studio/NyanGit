@@ -36,6 +36,7 @@
 		<link rel="import" href="../../bower_components/paper-toggle-button/paper-toggle-button.html">
 		<link rel="import" href="../../bower_components/paper-progress/paper-progress.html">
 		<link rel="import" href="../../bower_components/paper-item/paper-icon-item.html">
+		<link rel="import" href="../../bower_components/paper-dialog/paper-dialog.html">
 		<!-- Polymer functional -->
 		<script src="../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
 		<!-- Titlebar Button's functional -->
@@ -192,6 +193,12 @@
 						<div>
 							<!-- Stash form -->
 							<div class="page-container">
+								<!-- File example section -->
+								<div style="float: left; width: 50%; height: 100%; background-color: black">
+									
+								</div>
+								<!-- File section -->
+								<div style="float: right; width: 50%; height: 100%">
 									<!-- Stage file -->
 									<div role="listbox">
   										<!-- Add file -->
@@ -201,8 +208,8 @@
   												<div id="fileName" style="-webkit-user-select: none">cat_info.txt</div>
   											</paper-checkbox>
   											<div style="margin-right: auto"></div>
-  											<div style="padding-right: 4em">
-  												<iron-icon icon="add" style="padding-right: 1em; color: white; background-color: #8BC34A"></iron-icon>
+  											<div style="padding-right: 1em">
+  												<iron-icon icon="add" style="padding-left: 1em; color: white; background-color: #8BC34A"></iron-icon>
   											</div>
   										</paper-icon-item>
 
@@ -212,8 +219,8 @@
   												<div id="fileName" style="-webkit-user-select: none">cat.png</div>
   											</paper-checkbox>
   											<div style="margin-right: auto"></div>
-  											<div style="padding-right: 4em">
-  												<iron-icon icon="add" style="padding-right: 1em; color: white; background-color: #8BC34A"></iron-icon>
+  											<div style="padding-right: 1em">
+  												<iron-icon icon="add" style="padding-left: 1em; color: white; background-color: #8BC34A"></iron-icon>
   											</div>
   										</paper-icon-item>
 
@@ -224,8 +231,8 @@
   												<div id="fileName" style="-webkit-user-select: none">dog_info.txt</div>
   											</paper-checkbox>
   											<div style="margin-right: auto"></div>
-  											<div style="padding-right: 4em">
-  												<iron-icon icon="remove" style="padding-right: 1em; color: white; background-color: #D32F2F"></iron-icon>
+  											<div style="padding-right: 1em">
+  												<iron-icon icon="remove" style="padding-left: 1em; color: white; background-color: #D32F2F"></iron-icon>
   											</div>
   										</paper-icon-item>
 
@@ -235,11 +242,12 @@
   												<div id="fileName" style="-webkit-user-select: none">dog.png</div>
   											</paper-checkbox>
   											<div style="margin-right: auto"></div>
-  											<div style="padding-right: 4em">
-  												<iron-icon icon="remove" style="padding-right: 1em; color: white; background-color: #D32F2F"></iron-icon>
+  											<div style="padding-right: 1em">
+  												<iron-icon icon="remove" style="padding-left: 1em; color: white; background-color: #D32F2F"></iron-icon>
   											</div>
   										</paper-icon-item>
 									</div>
+								</div>
 								</div>
 								<!-- Commit bar -->
 								<div style="width: 100%; position: fixed; bottom: 0">
