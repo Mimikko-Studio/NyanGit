@@ -132,13 +132,13 @@
 					<paper-menu-button>
 						<paper-icon-button id="button-switch-branch" icon="arrow-drop-down" class="dropdown-trigger header-icon-button"></paper-icon-button>
 						<paper-menu id="list-exits-branch" class="dropdown-content">
-							<paper-item>
+							<paper-item style="cursor: pointer">
 								<div style="-webkit-user-select: none">stable</div>
 							</paper-item>
-							<paper-item>
+							<paper-item style="cursor: pointer">
 								<div style="-webkit-user-select: none">master</div>
-							</paper-item>
-							<paper-item>
+							</paper-item style="cursor: pointer">
+							<paper-item style="cursor: pointer">
 								<div style="-webkit-user-select: none">hotfix</div>
 							</paper-item>
 						</paper-menu>
@@ -169,20 +169,29 @@
 						<paper-icon-button id="button-merge" icon="communication:call-merge" class="middle header-icon-button"></paper-icon-button>
 							<paper-tooltip for="button-merge" offset="0">Merge</paper-tooltip>
 						<!-- Option -->
-						<paper-icon-button icon="more-vert" class="middle" onclick="mnuOption.open()"></paper-icon-button>
-						<paper-menu-button id="mnuOption" horizontal-offset="-160" vertical-offset="60">
+						<paper-icon-button icon="more-vert" class="middle header-icon-button" onclick="mnuOption.open()"></paper-icon-button>
+						<!-- Option menu -->
+						<paper-menu-button id="mnuOption" horizontal-offset="-180" vertical-offset="60">
 							<paper-menu class="dropdown-content">
-								<paper-item>
-									<iron-icon icon="reply" style="padding-right: 1px"></iron-icon>
+								<!-- View on Github -->
+								<paper-item style="cursor: pointer">
+									<iron-icon icon="reply" style="padding-right: 1em"></iron-icon>
 									<div style="-webkit-user-select: none">View on Github</div>
 								</paper-item>
-								<paper-item>
-									<iron-icon icon="folder-open" style="padding-right: 1px"></iron-icon>
+								<!-- Open in Explorer -->
+								<paper-item style="cursor: pointer">
+									<iron-icon icon="folder-open" style="padding-right: 1em"></iron-icon>
 									<div style="-webkit-user-select: none">Open in Explorer</div>
 								</paper-item>
-								<paper-item>
-									<iron-icon icon="code" style="padding-right: 1px"></iron-icon>
+								<!-- Open in Git Shell -->
+								<paper-item style="cursor: pointer">
+									<iron-icon icon="code" style="padding-right: 1em"></iron-icon>
 									<div style="-webkit-user-select: none">Open in Git Shell</div>
+								</paper-item>
+								<!-- Help -->
+								<paper-item style="cursor: pointer">
+									<iron-icon icon="help" style="padding-right: 1em"></iron-icon>
+									<div style="-webkit-user-select: none">Help</div>
 								</paper-item>
 							</paper-menu>
 						</paper-menu-button>
