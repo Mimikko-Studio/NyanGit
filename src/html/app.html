@@ -143,7 +143,7 @@
 							</paper-item>
 						</paper-menu>
 					</paper-menu-button>
-					<span style="-webkit-user-select: none">|</span>
+					<span style="cursor: default; -webkit-user-select: none">|</span>
 					<paper-icon-button id="button-branch" icon="communication:call-split" class="header-icon-button"></paper-icon-button>
 					<paper-tooltip for="button-branch" offset="0">Branch</paper-tooltip>
 					<!-- Middle Title -->
@@ -175,22 +175,27 @@
 							<paper-menu class="dropdown-content">
 								<!-- View on Github -->
 								<paper-item style="cursor: pointer">
-									<iron-icon icon="reply" style="padding-right: 1em"></iron-icon>
+									<iron-icon icon="reply" style="padding-right: 0.5em"></iron-icon>
 									<div style="-webkit-user-select: none">View on Github</div>
 								</paper-item>
 								<!-- Open in Explorer -->
 								<paper-item style="cursor: pointer">
-									<iron-icon icon="folder-open" style="padding-right: 1em"></iron-icon>
+									<iron-icon icon="folder-open" style="padding-right: 0.5em"></iron-icon>
 									<div style="-webkit-user-select: none">Open in Explorer</div>
 								</paper-item>
 								<!-- Open in Git Shell -->
 								<paper-item style="cursor: pointer">
-									<iron-icon icon="code" style="padding-right: 1em"></iron-icon>
+									<iron-icon icon="code" style="padding-right: 0.5em"></iron-icon>
 									<div style="-webkit-user-select: none">Open in Git Shell</div>
+								</paper-item>
+								<!-- Settings -->
+								<paper-item style="cursor: pointer">
+									<iron-icon icon="settings" style="padding-right: 0.5em"></iron-icon>
+									<div style="-webkit-user-select: none">Settings</div>
 								</paper-item>
 								<!-- Help -->
 								<paper-item style="cursor: pointer">
-									<iron-icon icon="help" style="padding-right: 1em"></iron-icon>
+									<iron-icon icon="help" style="padding-right: 0.5em"></iron-icon>
 									<div style="-webkit-user-select: none">Help</div>
 								</paper-item>
 							</paper-menu>
