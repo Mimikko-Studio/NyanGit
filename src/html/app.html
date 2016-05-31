@@ -143,8 +143,11 @@
 					<!-- Middle Title -->
 					<span class="middle title"></span>
 						<!-- Clone/New Repository -->
-						<paper-icon-button id="button-clone-repository" icon="av:queue" class="middle header-icon-button"></paper-icon-button>
+						<paper-icon-button id="button-clone-repository" icon="av:queue" class="middle header-icon-button" onclick="dlgCloneRepository.toggle()"></paper-icon-button>
 							<paper-tooltip for="button-clone-repository" offset="0">Clone/New</paper-tooltip>
+							<paper-dialog id="dlgCloneRepository">
+								<div>Test</div>
+							</paper-dialog>
 						<!-- Fetch -->
 						<paper-icon-button id="button-fetch" icon="image:rotate-left" class="middle header-icon-button"></paper-icon-button>
 							<paper-tooltip for="button-fetch" offset="0">Fetch</paper-tooltip>
@@ -174,8 +177,36 @@
 						Setting git info
 						-->
 						<!-- Options -->
-						<paper-icon-button id="button-option" icon="more-vert" class="header-icon-button middle">
+						<!--
+						<paper-icon-button id="button-option" icon="more-vert" class="header-icon-button middle" onclick="dlgOption.toggle()"></paper-icon-button>
 						<paper-tooltip for="button-option" offset="0">Options</paper-tooltip>
+						<paper-dialog id="dlgOption">
+						-->
+						<!--
+							<div style="overflow: hidden; max-width: 80px">
+								<paper-button>View on Github</paper-button>
+								<paper-button>Open in Explorer</paper-button>
+								<paper-button>Open in Git Shell</paper-button>
+							</div>
+						</paper-dialog>
+						-->
+						<paper-icon-button icon="more-vert" class="middle" onclick="mnuOption.open()"></paper-icon-button>
+						<paper-menu-button id="mnuOption" horizontal-offset="-160" vertical-offset="60">
+							<paper-menu class="dropdown-content">
+								<paper-item>
+									<iron-icon icon="refresh" style="padding-right: 1px"></iron-icon>
+									<div style="-webkit-user-select: none">View on Github</div>
+								</paper-item>
+								<paper-item>
+									<iron-icon icon="folder-open" style="padding-right: 1px"></iron-icon>
+									<div style="-webkit-user-select: none">Open in Explorer</div>
+								</paper-item>
+								<paper-item>
+									<iron-icon icon="code" style="padding-right: 1px"></iron-icon>
+									<div style="-webkit-user-select: none">Open in Git Shell</div>
+								</paper-item>
+							</paper-menu>
+						</paper-menu-button>
 					</paper-toolbar>
 				</div>
 				<!-- Contents -->
@@ -194,12 +225,10 @@
 							<!-- Stash form -->
 							<div class="page-container">
 								<!-- File example section -->
-								<div style="float: left; width: 50%; height: 100%; background-color: green; border-color: orange; border: 2px">
+								<div>
 									
-
 								</div>
 								<!-- File section -->
-								<div style="float: right; width: 50%; height: 100%">
 									<!-- Stage file -->
 									<div role="listbox">
   										<!-- Add file -->
@@ -247,8 +276,19 @@
   												<iron-icon icon="remove" style="padding-left: 1em; color: white; background-color: #D32F2F; border-radius: 4px"></iron-icon>
   											</div>
   										</paper-icon-item>
+
+  										<paper-icon-item id="file-4">
+  											<iron-icon icon="image:image" style="padding-right: 2em"></iron-icon>
+  											<paper-checkbox style="padding-right: 1em">
+  												<div id="fileName" style="-webkit-user-select: none">12345678901234567890</div>
+  											</paper-checkbox>
+  											<div style="margin-right: auto"></div>
+  											<div style="padding-right: 1em">
+  												<iron-icon icon="remove" style="padding-left: 1em; color: white; background-color: #D32F2F; border-radius: 4px"></iron-icon>
+  											</div>
+  										</paper-icon-item>
+
 									</div>
-								</div>
 								</div>
 								<!-- Commit bar -->
 								<div style="width: 100%; position: fixed; bottom: 0">
