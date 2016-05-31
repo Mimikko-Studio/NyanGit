@@ -132,9 +132,15 @@
 					<paper-menu-button>
 						<paper-icon-button id="button-switch-branch" icon="arrow-drop-down" class="dropdown-trigger header-icon-button"></paper-icon-button>
 						<paper-menu id="list-exits-branch" class="dropdown-content">
-							<paper-item>stable</paper-item>
-							<paper-item>master</paper-item>
-							<paper-item>hotfix</paper-item>
+							<paper-item>
+								<div style="-webkit-user-select: none">stable</div>
+							</paper-item>
+							<paper-item>
+								<div style="-webkit-user-select: none">master</div>
+							</paper-item>
+							<paper-item>
+								<div style="-webkit-user-select: none">hotfix</div>
+							</paper-item>
 						</paper-menu>
 					</paper-menu-button>
 					<span style="-webkit-user-select: none">|</span>
@@ -162,39 +168,12 @@
 						<!-- Merge -->
 						<paper-icon-button id="button-merge" icon="communication:call-merge" class="middle header-icon-button"></paper-icon-button>
 							<paper-tooltip for="button-merge" offset="0">Merge</paper-tooltip>
-						<!-- Seperate this to option menu -->
-						<!--
-						Open git url
-						//
-						Open local git folder
-						//
-						<paper-icon-button id="button-explorer" icon="folder-open" class="middle"></paper-icon-button>
-							<paper-tooltip for="button-explorer" offset="0" class="middle">Explorer</paper-tooltip>
-						Open git ternimal
-						//
-						<paper-icon-button id="button-ternimal" icon="code" class="middle"></paper-icon-button>
-							<paper-tooltip for="button-ternimal" offset="0" class="middle">Terminal</paper-tooltip>
-						Setting git info
-						-->
-						<!-- Options -->
-						<!--
-						<paper-icon-button id="button-option" icon="more-vert" class="header-icon-button middle" onclick="dlgOption.toggle()"></paper-icon-button>
-						<paper-tooltip for="button-option" offset="0">Options</paper-tooltip>
-						<paper-dialog id="dlgOption">
-						-->
-						<!--
-							<div style="overflow: hidden; max-width: 80px">
-								<paper-button>View on Github</paper-button>
-								<paper-button>Open in Explorer</paper-button>
-								<paper-button>Open in Git Shell</paper-button>
-							</div>
-						</paper-dialog>
-						-->
+						<!-- Option -->
 						<paper-icon-button icon="more-vert" class="middle" onclick="mnuOption.open()"></paper-icon-button>
 						<paper-menu-button id="mnuOption" horizontal-offset="-160" vertical-offset="60">
 							<paper-menu class="dropdown-content">
 								<paper-item>
-									<iron-icon icon="refresh" style="padding-right: 1px"></iron-icon>
+									<iron-icon icon="reply" style="padding-right: 1px"></iron-icon>
 									<div style="-webkit-user-select: none">View on Github</div>
 								</paper-item>
 								<paper-item>
@@ -303,7 +282,7 @@
 										<style is="custom-style">
 											paper-checkbox.custom-stage-all-file-checkbox
 											{
-												padding-right: 2em;
+												padding-right: 1.5em;
 											}
 											paper-checkbox.custom-stage-all-file-checkbox ::shadow #checkboxContainer #checkbox
 											{
