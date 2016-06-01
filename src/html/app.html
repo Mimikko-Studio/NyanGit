@@ -8,6 +8,8 @@
 		<!-- Import Polymer Components -->
 		<link rel="import" href="../../bower_components/polymer/polymer.html">
 		<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+		<link rel="import" href="../../bower_components/neon-animation/animations/scale-up-animation.html">
+		<link rel="import" href="../../bower_components/neon-animation/animations/fade-out-animation.html">
 		<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
 		<link rel="import" href="../../bower_components/neon-animation/neon-animation.html">
 		<link rel="import" href="../../bower_components/paper-toolbar/paper-toolbar.html">
@@ -37,6 +39,7 @@
 		<link rel="import" href="../../bower_components/paper-progress/paper-progress.html">
 		<link rel="import" href="../../bower_components/paper-item/paper-icon-item.html">
 		<link rel="import" href="../../bower_components/paper-dialog/paper-dialog.html">
+		<link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
 		<!-- Polymer functional -->
 		<script src="../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
 		<!-- Titlebar Button's functional -->
@@ -248,7 +251,7 @@
   										</paper-icon-item>
 
   										<!-- Edited file -->
-  										<paper-icon-item id="file-4">
+  										<paper-icon-item id="file-3">
   											<iron-icon icon="editor:insert-drive-file" style="padding-right: 2em"></iron-icon>
   											<paper-checkbox style="padding-right: 1em">
   												<div id="fileName" style="-webkit-user-select: none">credit.txt</div>
@@ -271,7 +274,7 @@
   										</paper-icon-item>
 
   										<!-- Remove file -->										
-										<paper-icon-item id="file-3">
+										<paper-icon-item id="file-5">
   											<iron-icon icon="editor:insert-drive-file" style="padding-right: 2em"></iron-icon>
   											<paper-checkbox style="padding-right: 1em">
   												<div id="fileName" style="-webkit-user-select: none">dog_info.txt</div>
@@ -282,7 +285,7 @@
   											</div>
   										</paper-icon-item>
 
-  										<paper-icon-item id="file-4">
+  										<paper-icon-item id="file-6">
   											<iron-icon icon="image:image" style="padding-right: 2em"></iron-icon>
   											<paper-checkbox style="padding-right: 1em">
   												<div id="fileName" style="-webkit-user-select: none">dog.png</div>
@@ -316,7 +319,7 @@
 											}
 										</style>
 										<!-- Commit button -->
-										<paper-button class="commit-button">
+										<paper-button id="button-commit" class="commit-button" onclick="dlgCommitConfirm.open()">
 											<div>Commit</div>
 											<iron-icon id="icoSave" icon="save"></iron-icon>
 										</paper-button>
@@ -342,6 +345,60 @@
 											}
 										</style>
 									</paper-toolbar>
+								</div>
+								<!-- Commit confirm dialog -->
+								<div>
+									<paper-dialog id="dlgCommitConfirm" entry-animation="scale-up-animation" exit-animation="fade-out-animation" modal style="min-width: 300px">
+										<div>
+											<div>
+												<h2>Commit Message</h2>
+												<div>
+													<paper-textarea></paper-textarea>
+													<style is="custom-style">
+														paper-textarea
+														{
+															overflow: auto;
+           													width: 600px;
+           													height: 140px;
+           													max-height: 100%;
+           													max-width: 100%;
+														}
+													</style>
+													<div>
+														<paper-toggle-button>
+															<div>Push changes immediately to origin/master</div>
+														</paper-toggle-button>
+													</div>
+													<div style="display: flex; flex-direction: row-reverse">
+														<paper-button class="confirm-commit" dialog-confirm>Confirm</paper-button>
+														<paper-button class="cancle-commit" dialog-dismiss>Cancel</paper-button>
+														<style is="custom-style">
+															
+															paper-button.cancle-commit
+															{
+																font-size: 14px;
+																font-weight: 500;
+																color: var(--dark-primary-color);
+															}
+
+															paper-button.confirm-commit
+															{
+																font-size: 14px;
+																font-weight: 500;
+																color: var(--dark-primary-color);
+															}
+														
+															paper-button.confirm-commit:hover
+															{
+																color: var(--accent-color);
+															}
+
+														</style>
+													</div>
+												</div>
+											</div>
+										</div>
+									</paper-dialog>
 								</div>
 							</div>
 							<!-- History page -->
