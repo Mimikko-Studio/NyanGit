@@ -3,6 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+		<!-- Import SweetAlert -->
+		<script src="../../bower_components/sweetalert/dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" href="../../bower_components/sweetalert/dist/sweetalert.css">
 		<!-- Import Custom Style -->
 		<link rel="stylesheet" href="../css/custom-style.css">
 		<!-- Import Polymer Components -->
@@ -370,7 +373,7 @@
 														</paper-toggle-button>
 													</div>
 													<div style="display: flex; flex-direction: row-reverse">
-														<paper-button class="confirm-commit" dialog-confirm>Confirm</paper-button>
+														<paper-button id="button-commit-confirm" class="confirm-commit" dialog-confirm>Confirm</paper-button>
 														<paper-button class="cancle-commit" dialog-dismiss>Cancel</paper-button>
 														<style is="custom-style">
 															
@@ -394,6 +397,59 @@
 															}
 
 														</style>
+														<!-- Button commit confirm functional -->
+														<script>
+															let btnCommitConfirm = document.getElementById("button-commit-confirm");
+																
+															btnCommitConfirm.addEventListener("tap", (e) =>
+															{
+																function commitCompleteAlert()
+																{
+																	swal({
+																		title: "Commit success :)",
+																		type: "success"
+																	});
+																}
+
+																function pushAlert()
+																{
+																	swal({
+																		title: "Pushing...",
+																		text: "This might take sometime to finish.",
+																		type: "info",
+																		showCancelButton: false,
+																		showConfirmButton: false,
+																		closeOnConfirm: false,
+																		timer: 4000
+																	}, () =>
+																	{
+																		setTimeout(() =>
+																		{
+																			//pushSuccessAlert();
+																			//pushFailAlert();
+																		}, 4000);
+																	});
+																}
+
+																function pushSuccessAlert()
+																{
+																	swal({
+																		title: "Push success :)",
+																		text: "Commit has pushed to origin/master",
+																		type: "success"
+																	});
+																}
+
+																function pushFailAlert()
+																{
+																	swal({
+																		title: "Push fail :(",
+																		text: "Unable to push now.",
+																		type: "error"
+																	});
+																}
+															});	
+														</script>
 													</div>
 												</div>
 											</div>
