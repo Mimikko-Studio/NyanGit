@@ -353,7 +353,7 @@
 											<div>
 												<h2>Commit Message</h2>
 												<div>
-													<paper-textarea></paper-textarea>
+													<paper-textarea id="text-commit-message"></paper-textarea>
 													<style is="custom-style">
 														paper-textarea
 														{
@@ -364,9 +364,9 @@
            													max-width: 100%;
 														}
 													</style>
-													<div>
+													<div style="display: flex; flex-direction: row">
 														<paper-toggle-button>
-															<div>Push changes immediately to origin/master</div>
+															<div style="-webkit-user-select: none">Push changes immediately to origin/master</div>
 														</paper-toggle-button>
 													</div>
 													<div style="display: flex; flex-direction: row-reverse">
